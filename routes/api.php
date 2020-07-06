@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/channels', function (Request $request) {
-    $router->get('/', 'channelController@list'); 
-    $router->get('/{channel-uuid}/{date}/{timezone}', 'channelController@schedule'); 
-    $router->get('/{channel-uuid}/programmes/{programme-uuid}', 'channelController@getDetails'); 
-});
+
+Route::get('/channels/', 'ChannelController@lists');
+Route::get('/channels/{channel-uuid}/programes/{program-uuid}', 'ChannelController@getDetails'); 
+Route::get('/channels/{channel-uuid}/{date}/{timezone}', 'ChannelController@schedule'); 
+
