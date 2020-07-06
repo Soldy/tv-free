@@ -13,4 +13,13 @@ class Description extends Model
     const UPDATED_AT = 'updated_at';
     protected $table = 'descriptions';
     protected $primaryKey = 'id';
+    public function langs()
+    {
+        $this->belongsToMany(
+            'app\Lang', 
+            'description_to_channel_with_lang', 
+            'langId', 
+            'descriptionId'
+        );
+    }
 }

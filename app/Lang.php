@@ -13,4 +13,10 @@ class Lang extends Model
     const UPDATED_AT = 'updated_at';
     protected $table = 'langs';
     protected $primaryKey = 'id';
+    public function save(array $options = [])
+    {
+         if(!isset($this->uuid))
+             $this->uuid= Str::uuid();
+         parent::save($options);
+    }
 }

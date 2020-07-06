@@ -13,10 +13,28 @@ class Channel extends Model
     const UPDATED_AT = 'updated_at';
     protected $table = 'channels';
     protected $primaryKey = 'id';
-    public function titles(){
-         $this->belongstomany('app\Title', 'title_to_channel_with_lang', 'titleId', 'channelId');
+    public function titles()
+    {
+        $this->belongsToMany(
+            'app\Title', 
+            'title_to_channel_with_lang',
+            'titleId', 
+            'channelId'
+        );
     }
-    public function descriptions(){
-         $this->belongstomany('app\Description', 'description_to_channel_with_lang', 'descriptionId', 'channelId');
+    public function descriptions()
+    {
+        $this->belongsToMany(
+            'app\Description', 
+            'description_to_channel_with_lang', 
+            'descriptionId', 
+            'channelId'
+        );
+    }
+    public function save(array $options = [])
+    {
+         if(!isset($this->uuid))
+             $this->uuid= Str::uuid();
+         parent::save($options);
     }
 }
