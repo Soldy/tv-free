@@ -13,10 +13,9 @@ class TitleToProgramWithLang extends Migration
      */
     public function up()
     {
-            //
-        $tableName = 'title_to_program_with_lang';
-        Schema::dropIfExists($tableName);
-        Schema::create($tableName, function (Blueprint $table) {
+        $tablename = 'title_to_program_with_lang';
+        Schema::dropIfExists($tablename);
+        Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->unsignedBigInteger('programId');
             $table->unsignedBigInteger('titleId');

@@ -13,9 +13,9 @@ class DescriptionToChannelWithLang extends Migration
      */
     public function up()
     {
-        $tableName = 'description_to_channel_with_lang';
-        Schema::dropIfExists($tableName);
-        Schema::create($tableName, function (Blueprint $table) {
+        $tablename = 'description_to_channel_with_lang';
+        Schema::dropIfExists($tablename);
+        Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->unsignedBigInteger('descriptionId');
             $table->unsignedBigInteger('channelId');

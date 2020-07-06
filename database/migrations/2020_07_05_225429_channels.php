@@ -13,9 +13,9 @@ class Channels extends Migration
      */
     public function up()
     {
-        $tableName = 'channels';
-        Schema::dropIfExists($tableName);
-        Schema::create($tableName, function (Blueprint $table) {
+        $tablename = 'channels';
+        Schema::dropIfExists($tablename);
+        Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->uuid('uuid');
             $table->string('icon', 256);

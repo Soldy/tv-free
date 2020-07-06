@@ -13,9 +13,9 @@ class Thumbnails extends Migration
      */
     public function up()
     {
-        $tableName = 'thumbnails';
-        Schema::dropIfExists($tableName);
-        Schema::create($tableName, function (Blueprint $table) {
+        $tablename = 'thumbnails';
+        Schema::dropIfExists($tablename);
+        Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->string('url', 70); // 
             $table->timestamps();

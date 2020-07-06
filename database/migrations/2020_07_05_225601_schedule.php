@@ -13,9 +13,9 @@ class Schedule extends Migration
      */
     public function up()
     {
-        $tableName = 'schedule';
-        Schema::dropIfExists($tableName);
-        Schema::create($tableName, function (Blueprint $table) {
+        $tablename = 'schedule';
+        Schema::dropIfExists($tablename);
+        Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->uuid('uuid');
             $table->unsignedBigInteger('channelId');

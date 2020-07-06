@@ -13,9 +13,9 @@ class Titles extends Migration
      */
     public function up()
     {
-        $tableName = 'titles';
-        Schema::dropIfExists($tableName);
-        Schema::create($tableName, function (Blueprint $table) {
+        $tablename = 'titles';
+        Schema::dropIfExists($tablename);
+        Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->string('title', 70);
             $table->timestamps(); // for backloging

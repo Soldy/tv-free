@@ -13,9 +13,9 @@ class ThumbnailsToProgram extends Migration
      */
     public function up()
     {
-        $tableName = 'thumbnails_to_programs';
-        Schema::dropIfExists($tableName);
-        Schema::create($tableName, function (Blueprint $table) {
+        $tablename = 'thumbnails_to_programs';
+        Schema::dropIfExists($tablename);
+        Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->uuid('uuid');
             $table->unsignedBigInteger('thumbnailId');

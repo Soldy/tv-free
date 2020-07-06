@@ -14,9 +14,9 @@ class Langs extends Migration
      */
     public function up()
     {
-        $tableName = 'langs';
-        Schema::dropIfExists($tableName);
-        Schema::create($tableName, function (Blueprint $table) {
+        $tablename = 'langs';
+        Schema::dropIfExists($tablename);
+        Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->uuid('uuid');
             $table->string('ISO_code', 2); 

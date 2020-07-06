@@ -13,9 +13,9 @@ class Descriptions extends Migration
      */
     public function up()
     {
-        $tableName = 'descriptions';
-        Schema::dropIfExists($tableName);
-        Schema::create($tableName, function (Blueprint $table) {
+        $tablename = 'descriptions';
+        Schema::dropIfExists($tablename);
+        Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->text('description')->default(" ");
             $table->timestamps(); // for backloging

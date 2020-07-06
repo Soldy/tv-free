@@ -13,9 +13,9 @@ class Programs extends Migration
      */
     public function up()
     {
-        $tableName = 'programs';
-        Schema::dropIfExists($tableName);
-        Schema::create($tableName, function (Blueprint $table) {
+        $tablename = 'programs';
+        Schema::dropIfExists($tablename);
+        Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->uuid('uuid');
             $table->smallInteger('duration')->unsigned();
