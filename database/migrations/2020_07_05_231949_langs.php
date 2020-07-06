@@ -19,8 +19,8 @@ class Langs extends Migration
         Schema::create($tablename, function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->uuid('uuid');
-            $table->string('ISO_code', 2); 
-            $table->string('ISO_name', 36);
+            $table->string('iso_code', 2); 
+            $table->string('iso_name', 36);
             $table->dateTime('start');
             $table->dateTime('end');
             $table->timestamps();
